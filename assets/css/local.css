@@ -30,6 +30,22 @@
   font-style: normal;
 }
 
+.font-minion-pro {
+  font-family: "MinionPro-Regular", serif !important;
+}
+
+.font-adelle-sans-bold {
+  font-family: "Adelle-Sans-Bold", sans-serif !important;
+}
+
+.font-adelle-sans-light {
+  font-family: "Adelle-Sans-Light", sans-serif !important;
+}
+
+.font-adelle-sans-regular {
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
+}
+
 :root {
   --color-gold-card: #dbd2c2;
   --gold-color: rgb(184, 166, 133);
@@ -892,10 +908,17 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  /* background-image: url("../../assets/Links/compressed-img/circle-img-1.webp");
+  background-image: url("../Links/compressed-img/bg-images/circle-index.svg");
+  background-size: contain;
+  background-position: 50% top;
+  background-repeat: no-repeat;
+}
+
+.contact-section {
+  background-image: url("../Links/compressed-img/bg-images/circle-contact.svg");
   background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat; */
+  background-position: 50% top;
+  background-repeat: no-repeat;
 }
 
 .index-bg {
@@ -1231,7 +1254,11 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("/Energlobix/assets/images/about_us_mobile.png");
+    background-image: url("../Links/compressed-img/bg-images/circle-index-mob.svg");
+  }
+
+  .contact-section {
+    background-image: url("../Links/compressed-img/bg-images/circle-contact-mob.svg");
   }
 
   .who-we-are-about-section {
