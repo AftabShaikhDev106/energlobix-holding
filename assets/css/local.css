@@ -910,7 +910,7 @@ body {
   overflow: hidden;
   margin-top: -335px;
   /* background: red; */
-  background-image: url("../Links/compressed-img/bg-images/circle-index.svg");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1920' height='1874' viewBox='0 0 1920 1874' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1320_17)'%3E%3Cellipse cx='960' cy='937' rx='1744' ry='937' fill='%237198BC'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1320_17'%3E%3Crect width='1920' height='1874' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-size: contain;
   background-position: 50% top;
   background-repeat: no-repeat;
@@ -918,7 +918,7 @@ body {
 }
 
 .contact-section {
-  background-image: url("../Links/compressed-img/bg-images/circle-contact.svg");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='1920' height='1874' viewBox='0 0 1920 1874' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1322_24)'%3E%3Cellipse cx='960' cy='1180' rx='1982' ry='1180' fill='%23192D50'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1322_24'%3E%3Crect width='1920' height='1874' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   background-size: cover;
   background-position: 50% top;
   background-repeat: no-repeat;
@@ -1049,14 +1049,14 @@ body {
   color: white;
   font-size: 28px;
   margin-bottom: 12px;
-  font-family: "MinionPro-Regular", sans-serif;
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
 }
 
 .contact-side-text {
   color: var(--gold-color);
   font-size: 18px;
   line-height: 1.8;
-  font-family: "Adelle-Sans-Regular", sans-serif;
+  font-family: "Adelle-Sans-Regular", sans-serif !important;
 }
 
 /* Inputs */
@@ -1257,11 +1257,11 @@ body {
 
 @media (max-width: 576px) {
   .about-section {
-    background-image: url("../Links/compressed-img/bg-images/circle-index-mob.svg");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='430' height='1630' viewBox='0 0 430 1630' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1320_21)'%3E%3Cellipse cx='215.5' cy='815' rx='850.5' ry='815' fill='%237198BC'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1320_21'%3E%3Crect width='430' height='1630' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   }
 
   .contact-section {
-    background-image: url("../Links/compressed-img/bg-images/circle-contact-mob.svg");
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='430' height='1630' viewBox='0 0 430 1630' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1322_26)'%3E%3Cellipse cx='214.5' cy='904.5' rx='913.5' ry='904.5' fill='%23192D50'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1322_26'%3E%3Crect width='430' height='1630' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E");
   }
 
   .who-we-are-about-section {
