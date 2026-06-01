@@ -12,6 +12,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     setInterval(showNextSlide, slideInterval);
   }
+
+  // Dynamic navbar height → hero-content-wrapper padding-top
+  const navbar = document.querySelector(".energlobix__navbar");
+  const heroWrapper = document.querySelector(".hero-content-wrapper");
+
+  if (navbar && heroWrapper) {
+    function syncNavbarPadding() {
+      const navHeight = navbar.getBoundingClientRect().height;
+      heroWrapper.style.paddingTop = navHeight + "px";
+    }
+
+    // Run on load, resize, and if navbar content changes size
+    syncNavbarPadding();
+    window.addEventListener("resize", syncNavbarPadding);
+
+    const navResizeObserver = new ResizeObserver(syncNavbarPadding);
+    navResizeObserver.observe(navbar);
+  }
 });
 
 // document.addEventListener("DOMContentLoaded", function() {

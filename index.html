@@ -168,19 +168,12 @@
         }
       }
 
-      /* Mobile default: Background image sits on the wrapper itself! */
+      /* Mobile: No background image on wrapper — image shown via skyline-banner instead */
       @media (max-width: 575px) {
         .custom-accordion-width-wrapper {
-          background-image: linear-gradient(
-              rgba(25, 45, 80, 0.55),
-              rgba(20, 39, 62, 0.8)
-            ),
-            url("assets/Links/compressed-img/imagecardimg.jpg");
-          background-size: cover;
-          background-position: center;
-          background-repeat: no-repeat;
-          border-radius: 4px;
-          padding: 3rem 1.5rem;
+          background-image: none;
+          background-color: transparent;
+          padding: 0 35px;
           margin-top: 2rem;
           margin-bottom: 2rem;
         }
@@ -200,10 +193,13 @@
         display: block;
       }
 
-      /* Mobile: Hide the separate banner container since the background is on the wrapper */
+      /* Mobile: Show banner as a visible image block */
       @media (max-width: 575px) {
         .skyline-banner {
-          display: none;
+          display: block;
+          height: 280px;
+          margin-top: 0;
+          border-radius: 4px;
         }
       }
 
@@ -213,10 +209,10 @@
         z-index: 2;
       }
 
-      /* Mobile: Reset margin-top so stacked cards sit fully inside the background wrapper container */
+      /* Mobile: Cards overlap the bottom of the skyline banner */
       @media (max-width: 575px) {
         .about-cards-row {
-          margin-top: 0 !important;
+          margin-top: -40px !important;
         }
       }
 
@@ -271,18 +267,13 @@
       @media (max-width: 575px) {
         .custom-card-gold {
           padding: 2.5rem 1.5rem;
-          background-color: rgba(
-            166,
-            156,
-            134,
-            0.95
-          ); /* Slight transparency on mobile for a glassmorphism feel on background */
+          background-color: #a69c86; /* Solid gold on mobile — cards sit independently below the image */
         }
         .custom-card-title {
           font-size: 1.6rem;
           margin-bottom: 1rem;
         }
-        Our Business Areas .custom-card-text {
+        .custom-card-text {
           font-size: 1.05rem;
         }
       }
@@ -666,7 +657,7 @@
             background-image: url('assets/Links/compressed-img/holding-hero.webp');
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: left bottom;
+            background-position: right  bottom;
           "
         >
           <div
@@ -767,12 +758,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                   <div class="custom-card-gold">
                     <h3
-                      class="energlobix__title font-adelle-sans-bold text-center text-white"
+                      class="energlobix__title font-adelle-sans-bold px-0 text-center text-white"
                     >
                       Our Vision
                     </h3>
                     <p
-                      class="energlobix__text font-adelle-sans-regular text-white"
+                      class="energlobix__text font-adelle-sans-regular px-0 text-white"
                     >
                       To expand across globally relevant industries through
                       businesses positioned for long-term growth, international
@@ -783,12 +774,12 @@
                 <div class="col-lg-6 col-md-6 col-sm-12">
                   <div class="custom-card-gold">
                     <h3
-                      class="energlobix__title font-adelle-sans-bold text-center text-white"
+                      class="energlobix__title font-adelle-sans-bold px-0 text-center text-white"
                     >
                       Our Mission
                     </h3>
                     <p
-                      class="energlobix__text font-adelle-sans-regular text-white"
+                      class="energlobix__text font-adelle-sans-regular px-0 text-white"
                     >
                       To build and operate businesses that contribute to
                       economic growth, global connectivity and sustainable
@@ -912,13 +903,13 @@
               >
                 <div class="w-100">
                   <div
-                    class="energlobix__title font-adelle-sans-bold text-center text-white text-center"
+                    class="energlobix__title px-0 font-adelle-sans-bold text-center text-white text-center"
                   >
                     Driven by Global Connectivity
                   </div>
 
                   <div
-                    class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+                    class=" px-0 energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
                   >
                     With international partnerships and crossmarket
                     <br class="hide-on-mobile" />
@@ -933,17 +924,17 @@
               </div>
 
               <div
-                class="col-lg-6 col-sm-12 insights-box d-none d-lg-flex bg-dark-blue"
+                class="col-lg-6 col-sm-12  insights-box d-none d-lg-flex bg-dark-blue"
               >
                 <div class="w-100">
                   <div
-                    class="energlobix__title text-center font-adelle-sans-bold text-white text-center"
+                    class="energlobix__title  text-center font-adelle-sans-bold text-white text-center px-0"
                   >
                     Focused on Sustainable Growth
                   </div>
 
                   <div
-                    class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+                    class=" energlobix__text font-adelle-sans-regular mt-3 text-center text-white px-0"
                   >
                     Our businesses are structured to support longterm
 
@@ -961,13 +952,13 @@
               >
                 <div class="w-100">
                   <div
-                    class="energlobix__title font-adelle-sans-bold text-center text-white text-center"
+                    class="energlobix__title font-adelle-sans-bold text-center text-white px-0 text-center"
                   >
                     Focused on Sustainable Growth
                   </div>
 
                   <div
-                    class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
+                    class=" energlobix__text font-adelle-sans-regular mt-3 text-center text-white px-0"
                   >
                     Our businesses are structured to support longterm
 
@@ -1015,7 +1006,7 @@
               Explore Our Companies
             </h3>
 
-            <div class="custom-accordion-width-wrapper mt-4 mb-5">
+            <div class="container mt-4 mb-5" style="max-width: 1143px;">
               <div class="row justify-content-center g-4">
                 <div class="col-md-4 col-sm-12 text-center text-white">
                   <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Energy</div>
