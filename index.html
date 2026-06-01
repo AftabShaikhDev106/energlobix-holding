@@ -96,7 +96,7 @@
 
       .logo-subtitle {
         font-family: "Adelle-Sans-Bold", sans-serif;
-        color: #192d50;
+        color: white;
         font-size: 0.6rem;
         letter-spacing: 0.15em;
         font-weight: 600;
@@ -295,6 +295,265 @@
         border: none;
         display: block;
       }
+
+      /* Custom Discover Button Styling */
+      .btn-discover {
+        border: 1px solid rgba(194, 177, 143, 0.4);
+        color: #c2b18f;
+        background-color: #000;
+        padding: 0.5rem 2rem; /* px-8 py-2 */
+        letter-spacing: 0.25em; /* tracking-[0.25em] */
+        font-size: 11px; /* text-[11px] */
+        text-transform: uppercase;
+        display: inline-block;
+        font-weight: 500;
+        transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+        text-decoration: none;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
+        border-radius: 4px;
+      }
+
+      /* Hover effects - Desktop only to avoid sticky hover on mobile */
+      @media (hover: hover) {
+        .btn-discover:hover {
+          background-color: #000;
+          color: #ffffff;
+          border-color: #c2b18f;
+          box-shadow: 0 0 15px rgba(194, 177, 143, 0.5);
+          transform: translateY(-2px);
+        }
+      }
+
+      /* Press effect - Mobile and Desktop */
+      .btn-discover:active {
+        background-color: #000;
+        color: #ffffff;
+        border-color: #c2b18f;
+        box-shadow: 0 0 25px rgba(194, 177, 143, 0.8);
+        transform: scale(0.95) translateY(0);
+        transition: all 0.05s ease;
+      }
+
+      .menu-wrapper {
+        position: relative;
+        pointer-events: auto;
+      }
+
+      /* Dropdown Navigation Menu & Mobile Sidebar */
+      .nav-menu-container {
+        position: fixed;
+        top: 0;
+        right: -320px; /* hidden off-screen by default on mobile */
+        width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.96);
+        backdrop-filter: blur(12px);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        pointer-events: none;
+        overflow-y: auto;
+        box-sizing: border-box;
+      }
+
+      .nav-menu-container.active {
+        right: 0; /* slide in on mobile */
+        pointer-events: auto;
+      }
+
+      .close-menu-btn {
+        align-self: flex-end;
+        background: none;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        padding: 0.5rem;
+        margin-bottom: 1.5rem;
+        transition: color 0.15s ease-in-out;
+      }
+
+      .close-menu-btn:hover {
+        color: #c2b18f;
+      }
+
+      /* Desktop dropdown styling */
+      @media (min-width: 992px) {
+        .nav-menu-container {
+          position: absolute !important;
+          top: 100% !important;
+          right: 0 !important;
+          left: auto !important;
+          width: 250px !important;
+          height: auto !important;
+          background-color: rgba(0, 0, 0, 0.95) !important;
+          backdrop-filter: blur(8px) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border-radius: 0.5rem !important;
+          z-index: 1000 !important;
+          padding: 0.5rem 0 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+          transform: translateY(-10px) !important;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+          overflow-y: visible !important; /* to allow submenus to fly out */
+        }
+
+        .nav-menu-container.active {
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: translateY(0) !important;
+          pointer-events: auto !important;
+        }
+
+        .close-menu-btn {
+          display: none !important;
+        }
+      }
+
+      .nav-menu-list {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+      }
+
+      .nav-menu-item {
+        margin: 0 !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding: 0 !important;
+      }
+
+      .nav-menu-link {
+        color: #fff !important;
+        font-size: 0.9rem !important;
+        font-weight: 400 !important;
+        letter-spacing: 0.1em !important;
+        text-decoration: none !important;
+        text-transform: uppercase !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 1rem 1.5rem !important;
+        transition: background-color 0.2s ease, color 0.2s ease !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .nav-menu-link:hover {
+        color: #c2b18f !important;
+        background-color: rgba(255, 255, 255, 0.05) !important;
+      }
+
+      /* Submenu styles */
+      .nav-submenu {
+        list-style: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 0 !important;
+        width: 100% !important;
+      }
+
+      .submenu-link {
+        color: #fff !important;
+        text-decoration: none !important;
+        transition: color 0.2s ease, background-color 0.2s ease !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+
+      .submenu-arrow {
+        transition: transform 0.2s ease-in-out !important;
+        margin-left: 0.5rem !important;
+        vertical-align: middle !important;
+      }
+
+      /* Mobile/Tablet Submenu Accordion styles */
+      @media (max-width: 991.98px) {
+        .nav-submenu {
+          display: none !important;
+          padding-left: 1.5rem !important;
+          margin: 0.5rem 0 1rem 0 !important;
+        }
+
+        .nav-submenu.open {
+          display: flex !important;
+          flex-direction: column !important;
+        }
+
+        .submenu-link {
+          color: #ccc !important;
+          font-size: 0.9rem !important;
+          display: block !important;
+          padding: 0.6rem 0 !important;
+        }
+
+        .submenu-link:hover {
+          color: #c2b18f !important;
+        }
+
+        .has-submenu.active > .nav-menu-link .submenu-arrow {
+          transform: rotate(180deg) !important;
+        }
+      }
+
+      /* Desktop flyout submenus */
+      @media (min-width: 992px) {
+        .nav-menu-item {
+          position: relative !important;
+        }
+
+        .nav-submenu {
+          position: absolute !important;
+          top: 0 !important;
+          right: 100% !important;
+          left: auto !important;
+          margin-right: 0.5rem !important;
+          width: 220px !important;
+          background-color: rgba(0, 0, 0, 0.95) !important;
+          backdrop-filter: blur(10px) !important;
+          border: 1px solid rgba(255, 255, 255, 0.1) !important;
+          border-radius: 0.5rem !important;
+          padding: 0.5rem 0 !important;
+          opacity: 0 !important;
+          visibility: hidden !important;
+          transform: translateX(10px) !important;
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .nav-menu-item.has-submenu:hover > .nav-submenu {
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: translateX(0) !important;
+        }
+
+        .submenu-link {
+          font-size: 0.9rem !important;
+          text-transform: uppercase !important;
+          display: block !important;
+          padding: 0.75rem 1.5rem !important;
+        }
+
+        .submenu-link:hover {
+          color: #c2b18f !important;
+          background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .submenu-arrow {
+          transform: rotate(270deg) !important; /* point right on desktop dropdown */
+        }
+      }
     </style>
   </head>
 
@@ -325,44 +584,72 @@
               HOLDINGS
             </div>
           </a>
-          <!-- Hamburger Icon -->
-          <button class="hamburger-btn" aria-label="Toggle navigation">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="1.5"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
+          <!-- Hamburger Icon & Menu Dropdown Wrapper -->
+          <div class="menu-wrapper">
+            <button
+              class="hamburger-btn"
+              id="open-menu-btn"
+              aria-label="Toggle navigation"
+            >
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.5"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </button>
 
-          <div class="navlinks-mobile">
-            <ul>
-              <li>
-                <a href="who-we-are.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Who We Are
-                  </div>
-                </a>
-              </li>
+            <!-- Dropdown Menu / Sidebar -->
+            <div class="nav-menu-container" id="nav-menu">
+              <!-- Sidebar Close Button (only visible on mobile/tablet) -->
+              <button class="close-menu-btn" id="close-menu-btn" aria-label="Close navigation">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="24" height="24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
 
-              <li>
-                <a href="how-we-do-it.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    How We Do it
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="invest.html" style="text-decoration: none;">
-                  <div class="link-header text-white">
-                    Invest
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <ul class="nav-menu-list">
+                <li class="nav-menu-item">
+                  <a
+                    href="https://energlobixholding.kasehub.com/"
+                    class="nav-menu-link"
+                    >Holding</a
+                  >
+                </li>
+                <li class="nav-menu-item has-submenu">
+                  <a href="#" class="nav-menu-link toggle-submenu">
+                    Energy
+                    <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </a>
+                  <ul class="nav-submenu">
+                    <li><a href="https://energlobix.com/" class="submenu-link">Home</a></li>
+                    <li><a href="https://energlobix.com/whoweare/" class="submenu-link">Who We Are</a></li>
+                    <li><a href="https://energlobix.com/whatwedo/" class="submenu-link">What We Do</a></li>
+                    <li><a href="https://energlobix.com/howwedoit/" class="submenu-link">How We Do It</a></li>
+                    <li><a href="https://energlobix.com/insights/" class="submenu-link">Insights</a></li>
+                    <li><a href="https://energlobix.com/contact" class="submenu-link">Contact</a></li>
+                  </ul>
+                </li>
+                <li class="nav-menu-item has-submenu">
+                  <a href="#" class="nav-menu-link toggle-submenu">
+                    Agriculture
+                    <svg class="submenu-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" width="12" height="12">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                  </a>
+                  <ul class="nav-submenu">
+                    <li><a href="https://energlobixagriculture.kasehub.com/" class="submenu-link">Home</a></li>
+                    <li><a href="https://energlobixagriculture.kasehub.com/who-we-are.html" class="submenu-link">Who We Are</a></li>
+                    <li><a href="https://energlobixagriculture.kasehub.com/what-we-do.html" class="submenu-link">What We Do</a></li>
+                    <li><a href="https://energlobixagriculture.kasehub.com/how-we-do-it.html" class="submenu-link">How We Do It</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -393,7 +680,7 @@
             <div class="hero-mid-section">
               <img
                 class="single-logo-transparent"
-                src="assets/images/single-logo-transparent.png"
+                src="assets/Links/single-logo-transparent.png"
                 alt=""
               />
               <div class="hero-mid-section-content">
@@ -508,7 +795,8 @@
             </div>
 
             <h3
-              class="energlobix__title text-center text-blue-2 mt-5 font-adelle-sans-bold"
+            style="margin-top: 3.5rem;"
+              class="energlobix__title text-center text-blue-2 font-adelle-sans-bold"
             >
               Our Business Areas
             </h3>
@@ -587,7 +875,8 @@
             </div>
 
             <div
-              class="container font-adelle-sans-regular energlobix__text mt-3 text-center text-white mb-5"
+            style="margin-bottom: 3.5rem;"
+              class="container font-adelle-sans-regular energlobix__text mt-3 text-center text-white"
             >
               Focused on quality, location and long-term relevance, EnerGlobix
 
@@ -687,7 +976,8 @@
             </div>
 
             <h3
-              class="energlobix__title text-center font-adelle-sans-bold text-white text-blue-2 mt-4"
+            style="margin-top: 3.5rem;"
+              class="energlobix__title text-center font-adelle-sans-bold text-white text-blue-2"
             >
               Building for the Future
             </h3>
@@ -713,42 +1003,47 @@
             </div>
 
             <h3
-              class="energlobix__title font-adelle-sans-bold text-center text-white text-blue-2 mt-4"
+            style="margin-top: 3.5rem;"
+              class="energlobix__title font-adelle-sans-bold text-center text-white text-blue-2"
             >
               Explore Our Companies
             </h3>
 
-            <div
-              class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-            >
-              EnerGlobix Energy:
-              <a
-                href="https://energlobix.com/"
-                class="text-white text-decoration-underline text-break"
-                >https://energlobix.com/</a
-              >
-            </div>
+            <div class="custom-accordion-width-wrapper mt-4 mb-5">
+              <div class="row justify-content-center g-4">
+                <div class="col-md-4 col-sm-12 text-center text-white">
+                  <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Energy</div>
+                  <a
+                    href="https://energlobix.com/"
+                    class="btn-discover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DISCOVER</a
+                  >
+                </div>
 
-            <div
-              class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white"
-            >
-              EnerGlobix Agriculture:
-              <a
-                href="https://energlobixagriculture.kasehub.com/"
-                class="text-white text-decoration-underline text-break"
-                >https://energlobixagriculture.kasehub.com/</a
-              >
-            </div>
+                <div class="col-md-4 col-sm-12 text-center text-white">
+                  <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Agriculture</div>
+                  <a
+                    href="https://energlobixagriculture.kasehub.com/"
+                    class="btn-discover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DISCOVER</a
+                  >
+                </div>
 
-            <div
-              class="container energlobix__text font-adelle-sans-regular mt-3 text-center text-white mb-5"
-            >
-              EnerGlobix Development:
-              <a
-                href="https://energlobixdevelopment.kasehub.com/"
-                class="text-white text-decoration-underline text-break"
-                >https://energlobixdevelopment.kasehub.com/</a
-              >
+                <div class="col-md-4 col-sm-12 text-center text-white">
+                  <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Development</div>
+                  <a
+                    href="https://energlobixdevelopment.kasehub.com/"
+                    class="btn-discover"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >DISCOVER</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -935,11 +1230,84 @@
         }
       }
 
-      // Mobile Menu Toggle
-      function toggleMobileMenu() {
-        const menu = document.querySelector(".navlinks-mobile");
-        menu.classList.toggle("active");
+      // Robust Menu Toggle and Accordion Logic
+      function initNavigationMenu() {
+        const openBtn = document.getElementById("open-menu-btn");
+        const navMenu = document.getElementById("nav-menu");
+        const closeBtn = document.getElementById("close-menu-btn");
+
+        if (!openBtn || !navMenu) return;
+
+        // Prevent duplicate listener binding
+        if (openBtn.dataset.bound) return;
+        openBtn.dataset.bound = "true";
+
+        openBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+          navMenu.classList.toggle("active");
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            navMenu.classList.remove("active");
+          });
+        }
+
+        // Close menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (navMenu.classList.contains("active") && !navMenu.contains(e.target) && !openBtn.contains(e.target)) {
+            navMenu.classList.remove("active");
+          }
+        });
       }
+
+      function initSubmenuAccordion() {
+        const submenuToggles = document.querySelectorAll(".toggle-submenu");
+        submenuToggles.forEach(toggle => {
+          if (toggle.dataset.bound) return;
+          toggle.dataset.bound = "true";
+
+          toggle.addEventListener("click", (e) => {
+            // Only execute on mobile/tablet (below 992px)
+            if (window.innerWidth < 992) {
+              e.preventDefault();
+              e.stopPropagation();
+              const parentLi = toggle.closest(".has-submenu");
+              const submenu = parentLi.querySelector(".nav-submenu");
+              
+              // Close other submenus first (accordion behavior)
+              document.querySelectorAll(".nav-submenu").forEach(sub => {
+                if (sub !== submenu) sub.classList.remove("open");
+              });
+              document.querySelectorAll(".has-submenu").forEach(li => {
+                if (li !== parentLi) li.classList.remove("active");
+              });
+              
+              submenu.classList.toggle("open");
+              parentLi.classList.toggle("active");
+            }
+          });
+        });
+      }
+
+      // Initialize instantly
+      initNavigationMenu();
+      initSubmenuAccordion();
+
+      // Initialize on DOMContentLoaded
+      document.addEventListener("DOMContentLoaded", () => {
+        initNavigationMenu();
+        initSubmenuAccordion();
+      });
+
+      // Initialize on Window Load
+      window.addEventListener("load", () => {
+        initNavigationMenu();
+        initSubmenuAccordion();
+      });
 
       // Dynamic padding logic for accordion div
       document.addEventListener("DOMContentLoaded", () => {
