@@ -255,6 +255,7 @@ a:active {
 
 /* Styles for mobiles (50% of the original size) */
 @media (max-width: 576px) {
+
   .energlobix__title,
   .energlobix__text,
   .energlobix__text_2,
@@ -372,7 +373,8 @@ body {
   }
 
   .contact-curve-overlay {
-    width: 220% !important; /* Elegant steep curve on desktop */
+    width: 220% !important;
+    /* Elegant steep curve on desktop */
   }
 }
 
@@ -515,7 +517,8 @@ body {
 }
 
 .energlobix__navbar .navlinks-mobile ul li ul.show {
-  max-height: 500px; /* Adjust this value based on the height of your submenu */
+  max-height: 500px;
+  /* Adjust this value based on the height of your submenu */
   opacity: 1;
   visibility: visible;
 }
@@ -669,7 +672,8 @@ body {
   }
 
   .contact-curve-overlay {
-    width: 350% !important; /* Steeper curve on mobile */
+    width: 350% !important;
+    /* Steeper curve on mobile */
   }
 
   .energlobix__navbar .navlinks-mobile ul li {
@@ -762,7 +766,8 @@ body {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: calc(100% - 335px); /* Match .about-section margin-top: -335px (curve overlap) */
+  height: calc(100% - 335px);
+  /* Match .about-section margin-top: -335px (curve overlap) */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -772,7 +777,8 @@ body {
 
 @media (max-width: 576px) {
   .hero-content-wrapper {
-    height: calc(100% - 535px); /* Match .about-section margin-top: -535px on mobile */
+    height: calc(100% - 535px);
+    /* Match .about-section margin-top: -535px on mobile */
   }
 }
 
@@ -837,7 +843,7 @@ body {
 }
 
 .hero-lower-section {
-  margin-top: 50px;
+  margin-top: 70px;
   /* font-size: 23px; */
   /* line-height: 27.8px; */
   font-size: 15px;
@@ -895,7 +901,7 @@ body {
 
   .hero-lower-section {
     /* margin-top: 115px; */
-    margin-top: 30px;
+    margin-top: 50px;
     /* font-size: 17.25px;
         line-height: 20.85px; */
     font-size: 15px;
@@ -955,7 +961,8 @@ body {
 }
 
 .contact-curve-overlay {
-  width: 220%; /* Steeper, more pronounced curve for contact section on desktop */
+  width: 220%;
+  /* Steeper, more pronounced curve for contact section on desktop */
   height: 100%;
   border-radius: 100%;
   z-index: 1;
@@ -963,36 +970,36 @@ body {
 
 .half-way-bg {
   position: relative;
-  padding-bottom: 300px; /* Space to absorb contact curve on desktop */
+  padding-bottom: 300px;
+  /* Space to absorb contact curve on desktop */
 }
 
 .half-way-bg::before {
   content: "";
   position: absolute;
-  top: 0; 
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       rgba(113, 152, 188, 1) 0%,
-      rgba(25, 45, 80, 0.9) 100%
-    ),
+      rgba(25, 45, 80, 0.9) 100%),
     url("../Links/compressed-img/holding-hero.webp");
   background-size: cover;
   background-position: 35% bottom;
   background-repeat: no-repeat;
   background-blend-mode: multiply;
   z-index: 1;
-  
+
   /* Seamless fade-in mask at the top of the background image to erase the sharp horizontal edge */
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 680px);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 680px);
 }
 
-.half-way-bg > * {
+.half-way-bg>* {
   position: relative;
-  z-index: 2; /* Ensures cards and content stay on top of the background */
+  z-index: 2;
+  /* Ensures cards and content stay on top of the background */
 }
 
 .energlobix-stats-section {
@@ -1232,7 +1239,8 @@ body {
   position: relative;
   overflow: hidden;
   margin-top: -260px;
-  padding-top: 110px; /* Slightly decreased top spacing to balance the curve dome on desktop */
+  padding-top: 110px;
+  /* Slightly decreased top spacing to balance the curve dome on desktop */
   padding-bottom: 100px;
   z-index: 15;
 }
@@ -1240,21 +1248,26 @@ body {
 /* Mobile */
 @media (max-width: 768px) {
   #section-contact {
-    margin-top: -150px !important; /* Increased negative margin to prevent white spots at corners */
-    padding-top: 60px !important; /* Balanced top spacing to clear the curve dome on mobile */
+    margin-top: -150px !important;
+    /* Increased negative margin to prevent white spots at corners */
+    padding-top: 60px !important;
+    /* Balanced top spacing to clear the curve dome on mobile */
     padding-bottom: 80px !important;
   }
 
   .half-way-bg {
-    padding-bottom: 180px !important; /* Space to absorb contact curve on tablet */
+    padding-bottom: 180px !important;
+    /* Space to absorb contact curve on tablet */
   }
 
   .curve-overlay {
-    width: 420% !important; /* Flattens the curve on tablet to prevent corner white spots */
+    width: 420% !important;
+    /* Flattens the curve on tablet to prevent corner white spots */
   }
 
   .contact-curve-overlay {
-    width: 280% !important; /* Steeper curve on tablet */
+    width: 280% !important;
+    /* Steeper curve on tablet */
   }
 
   .contact-heading {
@@ -1312,7 +1325,8 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 120.597px;
-  padding-bottom: 0px !important; /* Spacing handled inside .half-way-bg to avoid gaps */
+  padding-bottom: 0px !important;
+  /* Spacing handled inside .half-way-bg to avoid gaps */
   position: relative;
   z-index: 10;
 }
@@ -1391,7 +1405,8 @@ body {
   }
 
   .half-way-bg {
-    padding-bottom: 150px !important; /* Spacing for contact curve overlap on mobile */
+    padding-bottom: 150px !important;
+    /* Spacing for contact curve overlap on mobile */
   }
 
   .oval-container-2 {
@@ -1585,6 +1600,7 @@ body {
 }
 
 @media (max-width: 576px) {
+
   .how-box-bg1,
   .how-box-bg2,
   .how-box-bg3 {
@@ -1699,6 +1715,7 @@ body {
 }
 
 @media (max-width: 576px) {
+
   .insights,
   .career {
     padding-top: 48.6515px;
@@ -2046,7 +2063,8 @@ body {
 }
 
 #backToTopBtn:hover {
-  background-color: var(--gold-color); /* Darker background on hover */
+  background-color: var(--gold-color);
+  /* Darker background on hover */
 }
 
 .grid-container {
@@ -2057,7 +2075,8 @@ body {
 
 .grid-item {
   position: relative;
-  padding-bottom: 100%; /* This ensures the height equals the width */
+  padding-bottom: 100%;
+  /* This ensures the height equals the width */
   overflow: hidden;
 }
 
@@ -2095,7 +2114,8 @@ body {
 @media (min-width: 992px) {
   .approach-accordion-card {
     padding: 40px;
-    max-width: 1143px; /* Exactly matches and aligns with the combined width of the cards above */
+    max-width: 1143px;
+    /* Exactly matches and aligns with the combined width of the cards above */
   }
 }
 
@@ -2103,7 +2123,8 @@ body {
   .approach-accordion-card {
     padding-left: 35px !important;
     padding-right: 35px !important;
-    padding-top: 48px !important; /* Increased top spacing inside the card */
+    padding-top: 48px !important;
+    /* Increased top spacing inside the card */
   }
 }
 
@@ -2139,7 +2160,8 @@ body {
 }
 
 .approach-accordion-item.has-border-top {
-  border-top: 1px solid rgba(194, 177, 143, 0.3); /* border-[--gold-color]/30 */
+  border-top: 1px solid rgba(194, 177, 143, 0.3);
+  /* border-[--gold-color]/30 */
 }
 
 .approach-accordion-header {
@@ -2176,7 +2198,8 @@ body {
 }
 
 .approach-accordion-text {
-  color: #9ca3af; /* text-gray-400 */
+  color: #9ca3af;
+  /* text-gray-400 */
   margin-top: 16px;
   margin-bottom: 0;
   margin-left: 40px;
@@ -2192,6 +2215,7 @@ body {
 .map-container-align {
   width: 100%;
 }
+
 @media (min-width: 992px) {
   .map-container-align {
     width: calc(72% + 7.5rem);
@@ -2429,6 +2453,7 @@ body {
   padding-bottom: 6rem;
   z-index: 10;
 }
+
 @media (min-width: 992px) {
   .energlobix-stats-section {
     padding-top: 140px;
@@ -2437,17 +2462,16 @@ body {
 }
 
 .gradient-overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3),
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.9)
-  );
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9));
 }
 
 .stats-heading {
   margin-bottom: 4rem;
 }
+
 @media (min-width: 992px) {
   .stats-heading {
     margin-bottom: 100px;
@@ -2460,11 +2484,13 @@ body {
   width: 92%;
   margin: 0 auto;
 }
+
 @media (min-width: 768px) {
   .stats-grid-container {
     width: 94%;
   }
 }
+
 @media (min-width: 992px) {
   .stats-grid-container {
     width: 100%;
@@ -2491,10 +2517,12 @@ body {
   top: 0;
   transform: translateY(-140%);
 }
+
 .connector-dot {
   width: 0.5rem;
   height: 0.5rem;
 }
+
 .connector-path {
   height: 6rem;
   width: 2px;
