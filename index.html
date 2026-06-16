@@ -209,6 +209,14 @@
         z-index: 2;
       }
 
+      @media (min-width: 768px) {
+        .about-cards-row {
+          max-width: 85% !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+      }
+
       /* Mobile: Cards overlap the bottom of the skyline banner */
       @media (max-width: 575px) {
         .about-cards-row {
@@ -219,7 +227,7 @@
       .custom-card-gold {
         background-color: #a69c86; /* Premium desaturated gold/bronze color matching mockup */
         border-radius: 4px;
-        padding: 4.5rem 3rem;
+        padding: 3rem;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -254,7 +262,7 @@
 
       @media (max-width: 992px) {
         .custom-card-gold {
-          padding: 3rem 2rem;
+          padding: 2rem 2rem;
         }
         .custom-card-title {
           font-size: 1.85rem;
@@ -266,7 +274,7 @@
 
       @media (max-width: 575px) {
         .custom-card-gold {
-          padding: 2.5rem 1.5rem;
+          padding: 1.5rem 1.5rem;
           background-color: #a69c86; /* Solid gold on mobile — cards sit independently below the image */
         }
         .custom-card-title {
@@ -931,7 +939,7 @@
             </div>
 
                   <div
-                    class="energlobix__title px-0 font-adelle-sans-bold text-center text-white text-center"
+                    class="energlobix__title px-0 font-adelle-sans-bold text-center text-dark-blue text-center"
                   >
                     Driven by Global Connectivity
                   </div>
@@ -1052,9 +1060,9 @@
               Explore Our Companies
             </h3>
 
-            <div style="margin-bottom: 3.5rem;" class="container mt-4"  style="max-width: 1143px;">
-              <div class="row justify-content-center g-4">
-                <div class="col-md-4 col-sm-12 text-center text-white">
+            <div class="container mt-4 px-4 px-lg-5" style="margin-bottom: 5rem; max-width: 960px;">
+              <div class="row justify-content-center g-5">
+                <div class="col-md-4 col-sm-12 text-center text-white px-lg-4">
                   <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Energy</div>
                   <a
                     href="https://energlobix.com/"
@@ -1065,7 +1073,7 @@
                   >
                 </div>
 
-                <div class="col-md-4 col-sm-12 text-center text-white">
+                <div class="col-md-4 col-sm-12 text-center text-white px-lg-4">
                   <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Agriculture</div>
                   <a
                     href="https://energlobixagriculture.kasehub.com/"
@@ -1076,7 +1084,7 @@
                   >
                 </div>
 
-                <div class="col-md-4 col-sm-12 text-center text-white">
+                <div class="col-md-4 col-sm-12 text-center text-white px-lg-4">
                   <div class="mb-3 font-adelle-sans-bold" style="letter-spacing: 0.05em; font-size: 1.15rem;">EnerGlobix Development</div>
                   <a
                     href="https://energlobixdevelopment.kasehub.com/"
