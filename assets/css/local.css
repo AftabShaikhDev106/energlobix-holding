@@ -56,6 +56,7 @@
   --dark-green-color: #0e230a;
   --light-green-color: rgb(47, 70, 30);
   --color-orange: #e38b1a;
+  --logo-blue: #102d51;
 }
 
 .bg-card-gold {
@@ -85,6 +86,10 @@
 
 .bg-gold-color {
   background-color: var(--gold-color);
+}
+
+.bg-logo-blue {
+  background-color: var(--logo-blue);
 }
 
 @media (max-width: 576px) {
@@ -315,6 +320,10 @@ a:active {
 
 .text-dark-green {
   color: var(--dark-green-color);
+}
+
+.text-logo-blue {
+  color: var(--logo-blue);
 }
 
 .text-orange {
